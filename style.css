@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body {
+  color: white;
+}
+
+@theme {
+  --color-primary: black;
+  --color-secondary: gray;
+  --color-accent: skyblue;
+  --color-hoverAccent: blue;
+  --color-light: white;
+}
+
+@layer utilities {
+  .shadow-blackAndGray {
+    box-shadow: inset 5px -5px 5px #28313d, inset -5px 5px 5px grey;
+  }
+
+  .shadow-DarkAndGray {
+    box-shadow: inset 5px -5px 5px #2b333e, inset -5px 5px 5px rgb(86, 86, 86);
+  }
+}
+
+
+.playGradient {
+  background: linear-gradient(90deg , #3381ff97 , #ff5853bb , #54b2c5b3 , #7bea05aa);
+  background-size: 300% 300%;
+  animation: flowingGradient 3s linear infinite;
+}
+
+@keyframes flowingGradient {
+  0%{
+      background-position: 0% 50%;
+  }
+
+  100%{
+      background-position: 100% 50%;
+  }
+  
+}
